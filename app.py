@@ -5,12 +5,12 @@ import pickle
 app = Flask(__name__)
 
 
-@app.route('/home.html')
+@app.route('/')
 def home():
 
     return render_template('home.html')
 
-@app.route('/index.html',methods = ["GET","POST"])
+@app.route('/predict',methods = ["GET","POST"])
 def predict():
     '''
     For rendering results on HTML GUI
