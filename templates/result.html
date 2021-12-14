@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Headache type Prediction</title>
+		
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js">Headache type Prediction</script>		
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+		 <link rel="stylesheet" href="./../static/home.css" />
+    <link rel="shortcut icon" href="./../static/img/logo.png" />
+
+
+		<h1 style="color:NAVY;font-size:30px;font-family:Garamond;">Headache type Prediction</h1>
+              
+	</head>
+    <body style="background-color:#ffffff;">
+
+
+    	 <header>
+        <div class="container">
+            <div id="sitename">
+                <img src="./../static/img/logo.png" alt="Site Logo" />
+                <h1>Headache prediction system</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home.html#s" id="serv">Services</a></li>
+                    <li><a href="home.html#a">About Us</a></li>
+                    <li><a href="index.html">Prediction</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <style >
+
+        	    body {
+		  	  background-image: url("backgroundimage.jpg");
+		   	  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-position: center;
+}
+        	
+        	.footer {
+				background-color: black ;
+				padding: 10px;
+				text-align: center;
+				color: white; } 
+
+			.content { 
+            background-color: #333333  ;
+            border: 5px ;
+            padding: 30px ; width : 70% ;
+            margin: 50 px;
+            width: 550px;
+            height: 500px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color:white;
+}
+
+
+
+        </style>
+    </header>
+
+<br><br><br> 
+		<!-- Result -->
+		 <div class="content" > 
+
+		<div class="results">
+			<br> {% if prediction==1 %}
+				<br>  
+				<br>
+				<h4>Prediction:<span class="apply"> Customer will apply for Personal Loan.
+				</span></h4> 
+				<br>
+				<img class="predict_yes" src="{{url_for('static',filename = 'Yes.gif') }}" alt="Yes"> 
+				<br>
+				<br>
+				{% elif prediction==0 %} 
+				<br> <br>
+				<h4 >Prediction:<span class="not_apply"> Customer will not apply for Personal Loan.</h4> 
+				
+				<br> 
+				<img class="predict_no" src="{{url_for('static',filename = 'No.gif') }}" alt="No"> 
+				<br><br>
+	        {% endif %} <br><br>
+		</div>
+		
+	<p class="link-desc"> Below is the link to Git repository, linkedin , kaggle</p>
+    </body>
+    
+    </div> 
+    <br><Br>
+	<!-- Footer -->
+  <div class="footer">
+
+        <p > By Group 2 </p>
+
+			
+             <a target="_blank" href="https://github.com/NikhilPaliwal11/Personal-Loan-Prediction-Deployment"><i class="iconify" data-icon="ant-design:github-filled" data-inline="false" ></i></a>
+             <a target="_blank" href="https://www.linkedin.com/in/nikhil-paliwal-23b43618b"><i class="iconify" data-icon="fa-brands:linkedin" data-inline="false" ></i></a>
+             <a target="_blank" href="https://www.kaggle.com/nikhilpaliwal/notebooks" ><i class="iconify" data-icon="cib:kaggle" data-inline="false" ></i></a>
+			
+    </div>
+</body>
+	
+</html>
