@@ -10,7 +10,7 @@ def home():
 
     return render_template('home.html')
 
-@app.route('/index.html',methods = ["GET","POST"])
+@app.route('/index',methods = ["GET","POST"])
 def predict():
     '''
     For rendering results on HTML GUI
@@ -86,8 +86,9 @@ def predict():
             # f = request.form["Nausea"]
             print(f)
 
-            return render_template('index.html', prediction_text='Migraine type is ->{}'.format(output[0]))
-        except ValueError:
+            return render_template('result.html', prediction_text='{}'.format(output[0]))
+        except ValueError as e:
+            print(e)
             return render_template('index.html', prediction_text="Input values are not valid")
 
 
