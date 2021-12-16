@@ -86,7 +86,7 @@ def predict():
             # f = request.form["Nausea"]
             print(f)
 
-            return render_template('result.html', prediction_text='{}'.format(output[0]))
+            return render_template('result1.html', prediction_text='{}'.format(output[0]))
         except ValueError as e:
             print(e)
             return render_template('index.html', prediction_text="Input values are not valid")
